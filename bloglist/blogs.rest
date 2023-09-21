@@ -1,0 +1,45 @@
+GET http://localhost:3001/api/blogs
+
+###
+GET http://localhost:3001/api/blogs/64eba35d67db17e74c4ff6d5
+
+###
+
+POST http://localhost:3006/api/blogs HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkZyZWQiLCJpZCI6IjY0ZjA2YWIzYjk0ZDA4Yjg0OTZjNzgyNyIsImlhdCI6MTY5MzQ3NzU4Nn0.UNCHN9JWgOw7dRgZDPjexruFeq5s9g5ilDNZqrnc0oE
+
+{
+    "title": "Bossgebote1444###",
+    "author": "Kollegah",
+    "url": "https:122223.de",
+    "likes": 2
+}
+###
+POST http://localhost:3001/api/blogs/64f0427539315a5c105c41dd/comments HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Bossgebote1444###",
+    "author": "Kollegah",
+    "url": "https:122223.de",
+    "likes": 2,
+    "comments": ["Test Comment 253"],
+    "comment" : "Test Comment 1"
+}
+
+###
+DELETE http://localhost:3001/api/blogs/64f07f5e402e98a9dff7a223
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkZyZWQiLCJpZCI6IjY0ZjA2YWIzYjk0ZDA4Yjg0OTZjNzgyNyIsImlhdCI6MTY5MzQ3NzU4Nn0.UNCHN9JWgOw7dRgZDPjexruFeq5s9g5ilDNZqrnc0oE
+
+###
+PUT http://localhost:3001/api/blogs/64f0427539315a5c105c41dd
+content-type: application/json
+
+{
+    "title": "NEWNEWNWEN",
+    "author": "NEWNENW",
+    "url": "https:122223.de",
+    "likes": 3,
+    "id": "64ee1979ae23a2e0ff00a73d"
+}
